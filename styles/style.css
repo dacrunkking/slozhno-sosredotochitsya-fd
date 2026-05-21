@@ -11,6 +11,110 @@
   height: 100vh;          
   min-height: 668px;
   display: grid;
-  grid-template-columns: ;
-  grid-template-rows: 
+  grid-template-columns: 1fr;
+  grid-template-rows: 3, 1fr;
+  
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: start;
+
+}
+
+
+
+.header__title {
+justify-self: center;
+  align-self: center;
+  font-family: var(--main-font), sans-serif;
+  color: var(--main-title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__subtitle {
+justify-self: center;
+align-self: end;
+color: var(--text-title-color);
+  font-family: var(--main-font), sans-serif;
+
+}
+
+.header__rec {
+  position: absolute;
+  color: var(--nav-color);
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+  text-transform: uppercase;
+  inset-inline-end: calc(var(--main-gap) + 28px);
+  inset-block-start: calc(var(--main-gap) + 2px);
+}
+
+.header__rec::after {
+  content: '';
+  position: absolute;
+  inline-size: 10px;
+  block-size: 10px;
+  margin: -5px -20px 0 0;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--nav-color);
+  background-color: var(--nav-color);
+  inset-inline-end: 0;
+  inset-block-start: 50%;
+}
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-end: 1px solid var(--nav-color);
+  border-block-start: 1px solid var(--nav-color);
+  inset-inline-end: var(--main-gap);
+  inset-block-start: var(--main-gap);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--nav-color);
+  border-block-end: 1px solid var(--nav-color);
+  inset-inline-start: var(--main-gap);
+  inset-block-end: var(--main-gap);
+}
+
+.title-decor {
+  background-color: var(--accent-bg-color);
+  font-family: var(--main-font), sans-serif;
+  font-size: var(--main-text-size); 
+}
+
+.text__cards {
+  display: grid;
+}
+
+.text__card-title {
+  color: var(--text-title-color);
+  font-family: var(--main-font), sans-serif;
+
+}
+
+.text__card {
+  color: var(--card-text-color);
+}
+
+.text__cards-title {
+  color: var(--accent-color);
+  font-family: var(--main-font), sans-serif;
+
+}
+
+.card__text {
+  font-family: var(--main-font), sans-serif;
 }
