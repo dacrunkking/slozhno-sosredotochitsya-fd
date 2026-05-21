@@ -7,7 +7,7 @@
   background-color: var(--bg-color);
 }
 
-.header {
+/*.header {
   height: 100vh;          
   min-height: 668px;
   display: grid;
@@ -39,6 +39,51 @@ align-self: end;
 color: var(--text-title-color);
   font-family: var(--main-font), sans-serif;
 
+}
+*/
+
+.header {
+  height: 100vh;          
+  min-height: 668px;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Splits header into 3 proportional sections: Top, Middle (Title), Bottom (Subtitle) */
+  grid-template-rows: minmax(130px, auto) 1fr auto; 
+  box-sizing: border-box;
+  /* Adds a global padding inside the corner brackets */
+  padding: var(--main-gap); 
+}
+
+.header__theme-menu {
+  grid-row: 1;
+  justify-self: end;
+  align-self: start;
+  /* Exactly 39px from the bottom of the 'rec' text line at 668px height */
+  margin-block-start: 5.838vh; 
+  /* Visual adjustments to match the text layout in your image */
+  text-align: right; 
+}
+
+.header__title {
+  grid-row: 2;
+  justify-self: start; /* Flushes the 'no focus' text to the left edge */
+  align-self: center;
+  font-family: var(--main-font), sans-serif;
+  color: var(--main-title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  margin: 0;
+  line-height: 0.85; /* Tightens the vertical gap between 'no' and 'focus' */
+}
+
+.header__subtitle {
+  grid-row: 3;
+  justify-self: start; /* Aligns the pink block to the left edge */
+  align-self: end;
+  color: var(--text-title-color);
+  font-family: var(--main-font), sans-serif;
+  /* Adds spacing at the bottom so it doesn't touch the bottom corner bracket */
+  margin-block-end: calc(var(--main-gap) + 15px); 
 }
 
 .header__rec {
