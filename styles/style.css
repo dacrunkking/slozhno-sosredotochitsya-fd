@@ -47,10 +47,6 @@ color: var(--text-title-color);
   min-height: 668px;
   display: grid;
   grid-template-columns: 1fr;
-  /* Splits header into 3 proportional sections: Top, Middle (Title), Bottom (Subtitle) */
-  grid-template-rows: minmax(130px, auto) 1fr auto; 
-  box-sizing: border-box;
-  /* Adds a global padding inside the corner brackets */
   padding: var(--main-gap); 
 }
 
@@ -64,8 +60,25 @@ color: var(--text-title-color);
   text-align: right; 
 }
 
+.header__theme-menu-list {
+  display: grid;
+  gap: var( --main-gap);
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  font-family: var(--main-font), sans-serif;
+  color: var(--nav-color);
+  font-size: var(--main-text-size);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--nav-color);
+}
+
 .header__title {
-  grid-row: 2;
+  
   justify-self: start; /* Flushes the 'no focus' text to the left edge */
   align-self: center;
   font-family: var(--main-font), sans-serif;
@@ -77,13 +90,12 @@ color: var(--text-title-color);
 }
 
 .header__subtitle {
-  grid-row: 3;
   justify-self: start; /* Aligns the pink block to the left edge */
   align-self: end;
   color: var(--text-title-color);
   font-family: var(--main-font), sans-serif;
   /* Adds spacing at the bottom so it doesn't touch the bottom corner bracket */
-  margin-block-end: calc(var(--main-gap) + 15px); 
+  margin-block-end: calc(var(--main-gap) + 56px);
 }
 
 .header__rec {
@@ -170,3 +182,48 @@ color: var(--text-title-color);
   display: grid;
   gap: 50px;
 }
+
+.image__gallery {
+  display: grid;
+  gap: var(--main-gap);
+}
+
+.gallery__image {
+  inline-size: 100%;
+}
+
+/* tablet and up image grid settings
+
+.image__gallery {
+grid-template-columns: repeat(3, 1fr;
+}
+
+.image__gallery-heading {
+grid-column: 1/-1;
+}
+
+.gallery__image {
+block-size: 100%;
+object-fit: cover;
+object-position: center;
+}
+
+.gallery__image:first-of-type {
+grid-column: span 2;
+
+.gallery__image:nth-of-type(2) {
+grid-row: span 2;
+}
+
+gallery__image:nth-of-type(3) {
+grid-row: span 2;
+}
+
+.gallery__image:last-of-type {
+grid-column: span 2;
+}
+
+*/
+
+
+
