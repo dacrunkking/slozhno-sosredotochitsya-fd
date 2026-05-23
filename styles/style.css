@@ -140,13 +140,14 @@ color: var(--text-title-color);
   font-size: var(--main-text-size); 
 }
 
-.text__cards {
+.text__cards-block {
   display: grid;
 }
 
 .text__card-title {
   color: var(--text-title-color);
   font-family: var(--main-font), sans-serif;
+  margin-bottom: 10px;
 
 }
 
@@ -157,9 +158,15 @@ color: var(--text-title-color);
 .text__cards-title {
   color: var(--accent-color);
   font-family: var(--main-font), sans-serif;
+  margin-bottom: 20px;
 
 }
 
 .card__text {
   font-family: var(--main-font), sans-serif;
+}
+
+.content {
+  display: grid;
+  gap: 50px;
 }
