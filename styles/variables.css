@@ -1,9 +1,12 @@
 :root {
   --bg-image: url('../images/cover-image-dark.png');
   --bg-color: #000028;
-   --nav-color: #ff0070;
-  --main-font: 'IBM Plex mono';
+  --nav-color: #ff0070;
+  --header-min-height: 668px;
+  --main-font: 'IBM Plex mono', monospace;
   --main-text-size: 18px;
+  --font-weight-title: 700;
+  --font-weight-general: 400;
   --card-text-color: #F1B2CE;
   --main-title-color: #DB00FF;
   --main-gap: 10px;
@@ -11,4 +14,5 @@
   --accent-color: #ff0070;
   --accent-bg-color: #FF0070;
   --text-title-color: #000028;
+  --main-padding: 10px;
 }

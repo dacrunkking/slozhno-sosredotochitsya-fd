@@ -7,70 +7,40 @@
   background-color: var(--bg-color);
 }
 
-/*.header {
-  height: 100vh;          
-  min-height: 668px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 3, 1fr;
-  
-}
-
-.header__theme-menu {
-  justify-self: end;
-  align-self: start;
-
-}
-
-
-
-.header__title {
-justify-self: center;
-  align-self: center;
-  font-family: var(--main-font), sans-serif;
-  color: var(--main-title-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  text-shadow: 4px 4px 0 var(--accent-color);
-}
-
-.header__subtitle {
-justify-self: center;
-align-self: end;
-color: var(--text-title-color);
-  font-family: var(--main-font), sans-serif;
-
-}
-*/
-
 .header {
   height: 100vh;          
-  min-height: 668px;
+  min-height: var(--header-min-height);
   display: grid;
-  grid-template-columns: 1fr;
-  padding: var(--main-gap); 
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: var(--main-padding); 
+  position: relative;
 }
 
 .header__theme-menu {
-  grid-row: 1;
-  justify-self: end;
-  align-self: start;
-  /* Exactly 39px from the bottom of the 'rec' text line at 668px height */
-  margin-block-start: 5.838vh; 
-  /* Visual adjustments to match the text layout in your image */
-  text-align: right; 
+  justify-self: right;
+  padding-right: 1px;
+  padding-bottom: 2px;
 }
 
 .header__theme-menu-list {
-  display: grid;
-  gap: var( --main-gap);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 13px;
 }
 
 .header__theme-menu-button {
   background-color: transparent;
   border: none;
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font), monospace;
   color: var(--nav-color);
   font-size: var(--main-text-size);
+  font-weight: var(--font-weight-general);
+  line-height: 1;
+  text-align: center;
+  padding: 3px 12px;
 }
 
 .header__theme-menu-button_active {
@@ -79,28 +49,34 @@ color: var(--text-title-color);
 
 .header__title {
   
-  justify-self: start; /* Flushes the 'no focus' text to the left edge */
-  align-self: center;
-  font-family: var(--main-font), sans-serif;
+  justify-self: ; 
+  align-self: ;
+  font-family: var(--main-font), monospace;
   color: var(--main-title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
-  margin: 0;
-  line-height: 0.85; /* Tightens the vertical gap between 'no' and 'focus' */
+  line-height: 0.83;
 }
 
 .header__subtitle {
-  justify-self: start; /* Aligns the pink block to the left edge */
-  align-self: end;
+  justify-self: ; 
+  align-self: ;
+  
+  margin-bottom: 1px;
+
+}
+
+.header__subtitle-text {
   color: var(--text-title-color);
-  font-family: var(--main-font), sans-serif;
-  /* Adds spacing at the bottom so it doesn't touch the bottom corner bracket */
-  margin-block-end: calc(var(--main-gap) + 56px);
+  font-family: var(--main-font), monospace;
+  font-weight: var(--font-weight-title);
+  line-height: 23.4px;
 }
 
 .header__rec {
   position: absolute;
   color: var(--nav-color);
+  font-family: var(--main-font), monospace;
   font-size: var(--main-text-size);
   line-height: var(--main-line-height);
   text-transform: uppercase;
@@ -148,8 +124,14 @@ color: var(--text-title-color);
 
 .title-decor {
   background-color: var(--accent-bg-color);
-  font-family: var(--main-font), sans-serif;
-  font-size: var(--main-text-size); 
+  font-family: var(--main-font);
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+}
+
+.card__sections-container {
+  display: grid;
+  gap: 50px;
 }
 
 .text__cards-block {
@@ -158,8 +140,10 @@ color: var(--text-title-color);
 
 .text__card-title {
   color: var(--text-title-color);
-  font-family: var(--main-font), sans-serif;
-  margin-bottom: 10px;
+  font-family: var(--main-font), monospace;
+  line-height: var(--main-line-height);
+  font-weight: var(--font-weight-title);
+  margin-bottom: 11px;
 
 }
 
@@ -169,19 +153,51 @@ color: var(--text-title-color);
 
 .text__cards-title {
   color: var(--accent-color);
-  font-family: var(--main-font), sans-serif;
-  margin-bottom: 20px;
+  font-family: var(--main-font), monospace;
+  line-height: var(--main-line-height);
+  margin-bottom: 18px;
+  font-weight: var(--font-weight-title);
 
 }
 
 .card__text {
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font), monospace;
+  line-height: var(--main-line-height);
+  font-size: var(--main-text-size);
+  font-weight: var(--font-weight-genera);
 }
 
 .content {
   display: grid;
   gap: 50px;
+  padding: 0px 10px;
 }
+
+.text__cards-container {
+  display: grid;
+    gap: 18px;
+}
+
+.title-alternate {
+  font-weight: var(--font-weight-general);
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.card__sections-container {
+  display: grid;
+  gap: 50px;
+}
+
+.text__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.text__link:hover {
+  border-bottom: 1px solid var(--card-text-color); }
 
 .image__gallery {
   display: grid;
