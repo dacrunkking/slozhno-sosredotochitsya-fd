@@ -13,9 +13,8 @@
   grid-template-rows: 1fr min-content 1fr;
   justify-items: center;
   align-items: center;
-  height: 100vh;          
+  height: 100vh;
   min-height: var(--mode-min-height);
-  margin-bottom: 40px;
   padding: var(--main-padding);
 }
 
@@ -150,7 +149,7 @@
 }
 
 .text__card-title {
-  margin-bottom: 11px;
+  margin-bottom: 10px;
   color: var(--text-title-color);
   font-family: var(--main-font), monospace;
   font-weight: var(--font-weight-title);
@@ -163,7 +162,7 @@
 }
 
 .text__cards-title {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   color: var(--nav-color);
   font-family: var(--main-font), monospace;
   font-size: var(--main-text-size);
@@ -182,12 +181,12 @@
 .content {
   display: grid;
   gap: 50px;
-  padding: 0px var(--main-padding);
+  padding: 40px var(--main-padding) 0;
 }
 
 .text__cards-container {
   display: grid;
-    gap: 18px;
+  gap: 20px;
 }
 
 .title-alternate {
@@ -205,8 +204,7 @@
 }
 
 .text__link:hover {
-  border-bottom: 1px solid var(--card-text-color); 
-
+  border-bottom: 1px solid var(--card-text-color);
 }
 
 .text__link:focus {
@@ -237,7 +235,7 @@ color: var(--gallery-title-color);
   display: grid;
   justify-items: center;
   align-items: center;
-  height: 100vh;          
+  height: 100vh;
   min-height: var(--mode-min-height);
   padding: var(--main-padding);
 }
@@ -255,16 +253,10 @@ color: var(--gallery-title-color);
   :root {
     --main-gap: 20px;
     --main-padding: 20px;
-
-  
-  
   }
 
   .header {
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 60px;
-
-    
   }
 
   .header__theme-menu {
@@ -276,7 +268,7 @@ color: var(--gallery-title-color);
     grid-column: 1 / span 3;
     grid-row: 2;
     justify-self: start;
-    margin-left: -20px; 
+    margin-left: -20px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -284,9 +276,9 @@ color: var(--gallery-title-color);
     grid-column: 2 / span 2;
     grid-row: 3;
   }
-
   .content {
-    gap: 82px;
+    padding-top: 60px;
+    gap: 80px;
   }
 
   .dual-layout {
