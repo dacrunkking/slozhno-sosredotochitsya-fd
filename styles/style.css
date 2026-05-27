@@ -133,7 +133,7 @@
 }
 
 .title-decor {
-  font-family: var(--main-font);
+  font-family: var(--main-font), monospace;
   font-size: var(--main-text-size);
   line-height: var(--main-line-height);
   background-color: var(--accent-bg-color);
@@ -192,11 +192,6 @@
 .title-alternate {
   font-weight: var(--font-weight-general);
 }
-
-.section-title {
-  margin-bottom: 20px;
-}
-
 
 .text__link {
   text-decoration: none;
@@ -349,7 +344,7 @@ grid-column: span 2;
 
 .footer__text {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  /*font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);*/
+
 }
 }
 
