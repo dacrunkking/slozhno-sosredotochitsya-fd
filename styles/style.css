@@ -33,7 +33,7 @@
 
 .header__theme-menu-button {
   border: none;
-  padding: 3px 12px;
+  padding: 3px 12px 3px 13px;
   color: var(--nav-color);
   font-family: var(--main-font), monospace;
   font-weight: var(--font-weight-general);
@@ -171,6 +171,11 @@
 
 }
 
+.text__card-title-list {
+  margin-bottom: 0;
+
+}
+
 .card__text {
   font-family: var(--main-font), monospace;
   font-weight: var(--font-weight-genera);
@@ -180,7 +185,7 @@
 
 .content {
   display: grid;
-  gap: 50px;
+  gap: 49px;
   padding: 40px var(--main-padding) 0;
 }
 
@@ -273,7 +278,7 @@ color: var(--gallery-title-color);
   }
   .content {
     padding-top: 60px;
-    gap: 80px;
+    gap: 79px;
   }
 
   .dual-layout {
@@ -357,6 +362,18 @@ grid-column: span 2;
 
   .header__theme-menu-list {
     flex-direction: row;
+    padding-bottom: 0;
+    padding-top: 1px;
+    gap: 12.4px;
+  }
+
+  .header__theme-menu-button {
+    border: none;
+    padding: 1px 12px 5px 13px;
+  }
+
+  .header__subtitle {
+    margin-left: 1px;
   }
 
   .text__cards-title {
