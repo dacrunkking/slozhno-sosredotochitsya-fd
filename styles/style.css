@@ -91,7 +91,7 @@
   line-height: var(--main-line-height);
   text-transform: uppercase;
   inset-inline-end: calc(var(--main-gap) + 28px);
-  inset-block-start: calc(var(--main-gap) + 2px);
+  inset-block-start: calc(var(--main-gap) + 1px);
 }
 
 .header__rec::after {
@@ -195,7 +195,7 @@
 
 .text__link {
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 1px 0 var(--accent-color);
 }
 
 .text__link:hover {
