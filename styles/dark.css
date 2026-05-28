@@ -2,9 +2,19 @@
   --bg-image: url('../images/cover-image-dark.png');
   --bg-color: #000028;
   --nav-color: #ff0070;
-  --card-text-color: #f1b2ce;
-  --main-title-color: #db00ff;
+  --card-text-color: #F1B2CE;
+  --main-title-color: #DB00FF;
   --accent-color: #ff0070;
-  --accent-bg-color: #ff0070;
+  --accent-bg-color: #FF0070;
   --text-title-color: #000028;
+  --gallery-title-color: #000028;
+
 }
+
+@media (prefers-color-scheme: light) {
+  :root.theme-dark .header__rec {
+    display: block;
+  }
+}
+
+
