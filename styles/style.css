@@ -149,7 +149,6 @@
 }
 
 .text__card-title {
-  margin-bottom: 10px;
   color: var(--gallery-title-color);
   font-family: var(--main-font), monospace;
   font-weight: var(--font-weight-title);
@@ -159,6 +158,9 @@
 
 .text__card {
   color: var(--card-text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .text__cards-title {
@@ -249,7 +251,7 @@ color: var(--gallery-title-color);
 }
 
 @media (width >= 768px) {
-  
+
   :root {
     --main-gap: 20px;
     --main-padding: 20px;
@@ -292,7 +294,7 @@ color: var(--gallery-title-color);
 
   .reasons__title {
     grid-column: 1;
-    
+
   }
 
   .reasons__cards {
@@ -391,15 +393,4 @@ grid-column: span 2;
     gap: 20px;
   }
 
-  .concentration__card {
-    grid-column: 1;
-  }
-
-  .food__card {
-    grid-column: 2;
-  }
-
-  .gadgets__card {
-    grid-column: 3;
-  }
 }

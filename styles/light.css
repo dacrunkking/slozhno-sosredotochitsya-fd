@@ -30,4 +30,8 @@
   .header__rec {
     display: none;
   }
+
+  :root.theme-dark .header__rec {
+    display: block;
+  }
 }
